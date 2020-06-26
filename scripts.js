@@ -17,7 +17,7 @@
 // let firePower = 5
 
 
-// console.log(alienShip.hull);
+// console.log(Ship1.hull);
 
 // const rockenbach = 
 //     {
@@ -25,60 +25,131 @@
 //         firepower: 5,
 //         accuracy: .7,
 //         attackShip: function() {
-//             if (this.hull > 0 && alienShip.hull > 0) {
-//                 alienShip.hull -= this.firepower;
-//                 alert(alienShip.hull)
-//                 console.log(alienShip.hull)
+//             if (this.hull > 0 && Ship1.hull > 0) {
+//                 Ship1.hull -= this.firepower;
+//                 alert(Ship1.hull)
+//                 console.log(Ship1.hull)
 //                 return;
 //             } else [
 //                 console.log("You've defeated an alien ship!")
 //             ]
 //         }
 //     }
-let enemyHp = 20;
-let myHp = 20;
-const rockenbach = {hull: 20, firepower: 5, accuracy: .8}; // make a function to calculate ships chance to hit and comparing that with my accuracy. leave the .8
+//===========================================================================================
+// Game Actors ==============================================================================
+// ==========================================================================================
+
+
+const rockenbach = {
+    hull: 20,
+    firepower: 5,
+    accuracy: .8
+}; // make a function to calculate ships chance to hit and comparing that with my accuracy. leave the .8
 // let rockenbach = rockenbach;
 
-const alienShip = {hull: 20, firepower: 4, accuracy: .7}; //  make a function to calculate ships chance to hit and comparing that with my accuracy. leave the .8
-// let alienShip = alienShip;
+class Alienfleet { // Alien fleet class and constructor 
+    constructor(hull, firepower, accuracy) {
+        this.hull = hull;
+        this.firepower = firepower;
+        this.accuracy = accuracy;
+    }
+
+};
+const Ship1 = new Alienfleet(((Math.floor(Math.random() * (7 - 3) + 9))), ((Math.floor(Math.random() * (4 - 2) + 2))), ((Math.floor(Math.random() * 3) + 6) / 10))
+const Ship2 = new Alienfleet(((Math.floor(Math.random() * (7 - 3) + 9))), ((Math.floor(Math.random() * (4 - 2) + 2))), ((Math.floor(Math.random() * 3) + 6) / 10))
+const Ship3 = new Alienfleet(((Math.floor(Math.random() * (7 - 3) + 9))), ((Math.floor(Math.random() * (4 - 2) + 2))), ((Math.floor(Math.random() * 3) + 6) / 10))
+const Ship4 = new Alienfleet(((Math.floor(Math.random() * (7 - 3) + 3))), ((Math.floor(Math.random() * (4 - 2) + 2))), ((Math.floor(Math.random() * 3) + 6) / 10))
+const Ship5 = new Alienfleet(((Math.floor(Math.random() * (7 - 3) + 3))), ((Math.floor(Math.random() * (4 - 2) + 2))), ((Math.floor(Math.random() * 3) + 6) / 10))
+const Ship6 = new Alienfleet(((Math.floor(Math.random() * (7 - 3) + 3))), ((Math.floor(Math.random() * (4 - 2) + 2))), ((Math.floor(Math.random() * 3) + 6) / 10))
 
 
-// console.log(rockenbach.hull);
 
-let myAttack = (ship) => {
-    let myTurn = 1;
+// const alienShip = {hull: (Math.floor(Math.random()*7)), firepower: 4, accuracy: .7}; //  make a function to calculate ships chance to hit and comparing that with my accuracy. leave the .8
+
+// ==========================================================================================
+//  Attack Functions ========================================================================
+// ==========================================================================================
+
+let myAttack = (attackingShip, defendingShip) => {
     alert("Powering up Yamato cannon...")
-    alert("The alien ships hull has " + ship + " health left.")
-    if (myTurn > 0 && rockenbach.hull >= 0) {
-    alienShip.hull -= rockenbach.firepower;
-    myTurn--;
-    alert("You've attacked the alien spaceship for 5 damage! " + "The alien ships hull has " + alienShip.hull + " health remaining.")
+    alert("The alien ships hull has " + defendingShip.hull + " health left.")
+    if (attackingShip.hull > 1 && defendingShip.hull > 0) {
+        defendingShip.hull -= attackingShip.firepower;
+        alert("You've attacked the alien spaceship for 5 damage! " + "The alien ships hull has " + defendingShip.hull + " health remaining.")
     }
 }
 
-let alienAttack = (ship) => {
-    let myTurn = 1;
-    alert("Strange alien lights glow amongst the radiant stars...")
-    if (myTurn > 0 && alienShip.hull >= 0) {
-    rockenbach.hull -= alienShip.firepower;
-    myTurn--;
-    alert("The alien ships aim is true, striking you for " + alienShip.firepower + " damage, leaving your hull with " + rockenbach.hull + " health left.")
+let alienAttack = (attackingShip, defendingShip) => {
+    if (attackingShip.hull > 1 && defendingShip.hull > 0) {
+        alert("Strange alien lights glow amongst the radiant stars...")
+        defendingShip.hull -= attackingShip.firepower;
+        alert("The alien ships aim is true, striking you for " + attackingShip.firepower + " damage, leaving your hull with " + defendingShip.hull + " health left.")
     }
 }
 
+// ==========================================================================================
+// Start game function ======================================================================
+// ==========================================================================================
+
+
+// let startGame = () => {
+
+
+// }
+
+
+
+// ==========================================================================================
+// Battle function ==========================================================================
+// ==========================================================================================
 alert("TEST!");
 let battle = () => {
-    
-    while (rockenbach.hull > 0 && alienShip.hull > 0) {
-        console.log(myAttack(alienShip.hull));
-        console.log(alienAttack(rockenbach.hull));
-    } 
+    while (rockenbach.hull > 0 && Ship1.hull > 0) {
+        console.log(myAttack(rockenbach, Ship1));
+        console.log(alienAttack(Ship1, rockenbach)); 
     }
+    while (rockenbach.hull > 0 && Ship2.hull > 0) {
+        console.log(myAttack(rockenbach, Ship2));
+        console.log(alienAttack(Ship2, rockenbach));
+    }
+    while (rockenbach.hull > 0 && Ship3.hull > 0) {
+        console.log(myAttack(rockenbach, Ship3));
+        console.log(alienAttack(Ship3, rockenbach));
+    }
+    while (rockenbach.hull > 0 && Ship4.hull > 0) {
+        console.log(myAttack(rockenbach, Ship4));
+        console.log(alienAttack(Ship4, rockenbach));
+    }
+    while (rockenbach.hull > 0 && Ship5.hull > 0) {
+        console.log(myAttack(rockenbach, Ship5));
+        console.log(alienAttack(Ship5, rockenbach));
+    }
+    while (rockenbach.hull > 0 && Ship6.hull > 0) {
+        console.log(myAttack(rockenbach, Ship6));
+        console.log(alienAttack(Ship6, rockenbach));
+    } 
+    while (rockenbach.hull > 0 && Ship6.hull <= 0) {
+        alert("You win!!!!")
+        break;
+    }
+}
 battle()
+// let alienHull = (Math.floor(Math.random()*7)); // This is the property that holds the value of the aliens hull RNG
+// class Alienfleet (hull, firepower, accuracy) {
+//     this,hull = hull;
+//     this.firepower = firepower;
+//     this.accuracy = accuracy;
+// };
+// const Ship1 = new Class (alienHull, 2, .8)
+// const Ship2 = new Class (3, 2, .8)
+// const Ship3 = new Class (3, 2, .8)
+// const Ship4 = new Class (3, 2, .8)
+// const Ship5 = new Class (3, 2, .8)
+// const Ship6 = new Class (3, 2, .8)
+
 
 // alert("Time to attack");
-// myAttack(alienShip.hull)
+// myAttack(Ship1.hull)
 // alienAttack(rockenbach.hull)
 // console.log(rockenbach);
 
@@ -87,7 +158,9 @@ battle()
 // Need a random function to determine HP, firepower, and accuracy. Use Math.random
 // HP = 3 - 6, firepower = 2 - 4, accuracy = .6-.8
 
-
+// ============================================================================================
+// Intro game alerts ==========================================================================
+// ============================================================================================
 
 // alert("ATTENTION: USS Rockenbach Your heavy artillery is needed in the Orion constellation immediately");
 // prompt("Are you ready to depart?", "yes/no");
@@ -95,7 +168,7 @@ battle()
 // alert("Destination reached. Security perimeter breached.")
 // alert("USS Rockenbach prepare for battle...");
 // alert("Moving in range");
-// myAttack(alienShip.hull)
+// myAttack(Ship1.hull)
 // alienAttack(rockenbach.hull)
 
 
@@ -123,7 +196,7 @@ battle()
 // 6. Transition into next battle
 
 // ex. if (USS Rockenbach.hull > 0 && Alien Ship.hull > 0) {
-//   myAttack(alienShip.Hull);
+//   myAttack(Ship1.hull);
 // } else {
 //   
 //}
@@ -131,7 +204,7 @@ battle()
 /* While (USS Rockenbach.hull > 0 && Alien Ship.hull > 0) {
    attacks = 0;
    attacks++;
-   myAttack(alienShip.Hull);
+   myAttack(Ship1.hull);
    alienAttack(rockenbach.hull)
 }
 
@@ -139,13 +212,13 @@ Late night next example --- try to implement a function similar to this. STAY PO
 */
 // alert("TEST");
 // let battle = () => {
-    
-// if (rockenbach.hull > 0 && alienShip.hull > 0) {
+
+// if (rockenbach.hull > 0 && Ship1.hull > 0) {
 //     let round = 0;
-//     console.log(myAttack(alienShip.hull));
+//     console.log(myAttack(Ship1.hull));
 //     console.log(alienAttack(rockenbach.hull));
 //     round++;    
-// } else if (rockenbach.hull > 0 && alienShip.hull < 0) {
+// } else if (rockenbach.hull > 0 && Ship1.hull < 0) {
 //   alert("You win!");
 // } else {
 //   alert("You lose!");
@@ -158,33 +231,10 @@ Late night next example --- try to implement a function similar to this. STAY PO
 // TEST while loop:
 // alert("TEST!");
 // let battle = () => {
-    
-//     while (rockenbach.hull > 0 && alienShip.hull > 0) {
-//         console.log(myAttack(alienShip.hull));
+
+//     while (rockenbach.hull > 0 && Ship1.hull > 0) {
+//         console.log(myAttack(Ship1.hull));
 //         console.log(alienAttack(rockenbach.hull));
 //     };
 //     }
 // battle()
-
-// const spaceBattle = [
-//     {
-//         player: "player1",
-//         properties: [
-//             {
-//                 hull: 20,
-//                 firepower: 5,
-//                 accuracy: .8
-//             }
-//         ]
-//     },
-//     {   
-//         player: "alienShip",
-//         properties: [
-//             {
-//                 hull: 6,
-//                 firepower: 5,
-//                 accuracy: .6
-//             }
-//         ]
-//     }
-// ]
