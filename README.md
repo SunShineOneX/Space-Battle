@@ -11,10 +11,10 @@ in this high fidelity cosmic battle as you try to defeat all 6 of the alien flee
 -A 'play again' feature for replay-ability
 
 ## Motivation
--PerScholas Software Engineer program
+PerScholas Software Engineer program
 
 ## Technologies used
--Javascript
+Javascript
 
 ## How to play
 -Simply head to https://sunshineonex.github.io/Space-Battle/ and the game will automatically started upon page load.
@@ -28,4 +28,4 @@ in this high fidelity cosmic battle as you try to defeat all 6 of the alien flee
 
 
 ## Credits
--Jeffrey Rockenbach https://github.com/SunShineOneX
+Jeffrey Rockenbach https://github.com/SunShineOneX
