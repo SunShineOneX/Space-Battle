@@ -258,3 +258,83 @@ let gameOver = () => {
 
 
 startGame()
+
+
+
+
+// Alien Horde properties
+// 6 alien ships in the fleet.
+// Need a random function to determine HP, firepower, and accuracy. Use Math.random
+// HP = 3 - 6, firepower = 2 - 4, accuracy = .6-.8
+
+// ============================================================================================
+// Intro game alerts ==========================================================================
+// ============================================================================================
+
+
+// ==================================================================================
+// ================================= Game object ideas ==============================
+// ==================================================================================
+
+// if USS Rockenbach hull > 0 and alien fleet amount of ships > 0 then;
+// 1. fight
+// 2. evaluate win/lose conditions
+// 3. next fight or game over
+
+
+
+
+// ==================================================================================
+// ================================= Combat loop ideas ==============================
+// ==================================================================================
+// Condition: if USS Rockenbach hull HP > 0 && current alien ship hull HP > 0 THEN;
+// 1. run my first attack
+// 2. Evaluate HP conditions
+// 3. run enemy attack
+// 4. Evaluate HP conditions
+// 5. So on and so fourth until someone has died
+// 6. Transition into next battle
+
+// ex. if (USS Rockenbach.hull > 0 && Alien Ship.hull > 0) {
+//   myAttack(Ship1.hull);
+// } else {
+//   
+//}
+// ex.
+/* While (USS Rockenbach.hull > 0 && Alien Ship.hull > 0) {
+   attacks = 0;
+   attacks++;
+   myAttack(Ship1.hull);
+   alienAttack(rockenbach.hull)
+}
+
+Late night next example --- try to implement a function similar to this. STAY POSITIVE!
+*/
+// alert("TEST");
+// let battle = () => {
+
+// if (rockenbach.hull > 0 && Ship1.hull > 0) {
+//     let round = 0;
+//     console.log(myAttack(Ship1.hull));
+//     console.log(alienAttack(rockenbach.hull));
+//     round++;    
+// } else if (rockenbach.hull > 0 && Ship1.hull < 0) {
+//   alert("You win!");
+// } else {
+//   alert("You lose!");
+// };
+// }
+
+// battle()
+
+// NOTES: We may need to make this a while loop.
+// TEST while loop:
+// alert("TEST!");
+// let battle = () => {
+
+//     while (rockenbach.hull > 0 && Ship1.hull > 0) {
+//         console.log(myAttack(Ship1.hull));
+//         console.log(alienAttack(rockenbach.hull));
+//     };
+//     }
+// battle()
