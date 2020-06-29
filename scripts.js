@@ -19,8 +19,6 @@ let deathIndex = 0; // This a function track how many ships are left, evaluating
 let attackVal; // variable used to determine if the attack of either ship is successful, returned into the battle function to either strike the ship or alert the ship has missed.
 let alienAttackAccuracy; // variable used to determined the accuracy of the alien ships which results in the range of .6-.8
 let retreatVal; // This determines if the player decided to retreat or not.
-retreatVal = retreat(); // This determines if the player decided to retreat or not. If so it takes the player to the game over screen.
-
 
 //===========================================================================================
 // Game actors ==============================================================================
