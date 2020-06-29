@@ -25,15 +25,6 @@ in this high fidelity cosmic battle as you try to defeat all 6 of the alien flee
 -Destroy all 6 enemy ships to win!
 
 
-
-## Technologies used
-Javascript
-
-## How to play
-Simply head to https://sunshineonex.github.io/Space-Battle/ and the game will automatically started upon page load.
-Destroy all 6 enemy ships to win!
-
-
 ## Challenges
 -Getting the players and enemies ships health points to depreciate after every battle as well as retaining those reduced values from battle to battle.
 -Getting the game to actually end.
