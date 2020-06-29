@@ -115,6 +115,8 @@ let battle = () => {
         console.log(myAttack(rockenbach, Ship1));
         console.log(alienAttack(Ship1, rockenbach));
     }
+
+    retreatVal = retreat();
     // declaring retreatVal every battle as it's locally scoped to each skirmish.
     if (retreatVal == 1) { // This determines if the player decided to retreat or not. If so it takes the player to the game over screen.
         return gameOver();
@@ -122,25 +124,28 @@ let battle = () => {
 
     while (rockenbach.hull > 0 && Ship2.hull > 0) {
         console.log(myAttack(rockenbach, Ship2));
-        console.log(alienAttack(Ship2, rockenbach));
+        console.log(alienAttack(Ship2, rockenbach)); // create a function call start game that calls battle
     }
+    retreatVal = retreat();
 
     if (retreatVal == 1) {
         return gameOver();
     }
 
-    while (rockenbach.hull > 0 && Ship3.hull > 0) {
+    while (rockenbach.hull > 0 && Ship3.hull > 0) { // player dies or player or he wins, would you like to play again?
         console.log(myAttack(rockenbach, Ship3));
-        console.log(alienAttack(Ship3, rockenbach));
+        console.log(alienAttack(Ship3, rockenbach)); // Start game function has 3 variables win = 1, retreat = 2, lose = 3.
     }
+    retreatVal = retreat();
 
     if (retreatVal == 1) {
         return gameOver();
     }
-    while (rockenbach.hull > 0 && Ship4.hull > 0) {
+    while (rockenbach.hull > 0 && Ship4.hull > 0) { // returns a 1 for each variable. then set of ifs. if = 1 you have won.
         console.log(myAttack(rockenbach, Ship4));
         console.log(alienAttack(Ship4, rockenbach));
     }
+    retreatVal = retreat();
 
     if (retreatVal == 1) {
         return gameOver();
@@ -149,6 +154,7 @@ let battle = () => {
         console.log(myAttack(rockenbach, Ship5));
         console.log(alienAttack(Ship5, rockenbach));
     }
+    retreatVal = retreat();
 
     if (retreatVal == 1) {
         return gameOver();
@@ -157,6 +163,7 @@ let battle = () => {
         console.log(myAttack(rockenbach, Ship6));
         console.log(alienAttack(Ship6, rockenbach));
     }
+    retreatVal = retreat();
 
     if (retreatVal == 1) {
         return gameOver();
