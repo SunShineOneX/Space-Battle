@@ -239,3 +239,4 @@ let gameOver = () => {
 // All of the meat and potatoes of this grandiose space battle game are contained within this tiny function call.
 
 startGame()
+
