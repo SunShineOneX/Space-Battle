@@ -1,4 +1,4 @@
-/// Space Battle Mod Project
+// Space Battle Mod Project
 
 // First steps: We need to create our actors
 // 1. Create the USS Rockenbach and outline it's attributes
