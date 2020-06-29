@@ -13,7 +13,7 @@ in this high fidelity cosmic battle as you try to defeat all 6 of the alien flee
 -A 'play again' feature for replay-ability
 
 ## Motivation
-PerScholas Software Engineer program
+PerScholas Software Engineering program
 
 ## Technologies used
 Javascript
