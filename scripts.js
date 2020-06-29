@@ -18,8 +18,9 @@ let userVal; // used to determine whether the user wants to play again or not
 let deathIndex = 0; // This a function track how many ships are left, evaluating my overall win conditions. Also helps determine how many ships the player has defeated.
 let attackVal; // variable used to determine if the attack of either ship is successful, returned into the battle function to either strike the ship or alert the ship has missed.
 let alienAttackAccuracy; // variable used to determined the accuracy of the alien ships which results in the range of .6-.8
+let outcome = 0;
+let shipsRemaining; // variable used to determine how many ships are left to defeat before winning the game
 let retreatVal; // This determines if the player decided to retreat or not.
-
 //===========================================================================================
 // Game actors ==============================================================================
 // ==========================================================================================
