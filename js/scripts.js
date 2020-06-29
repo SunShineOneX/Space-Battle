@@ -1,4 +1,4 @@
-// Space Battle Mod Project
+/// Space Battle Mod Project
 
 // First steps: We need to create our actors
 // 1. Create the USS Rockenbach and outline it's attributes
@@ -236,6 +236,6 @@ let gameOver = () => {
 // ==========================================================================================
 // Start Game function ======================================================================
 // ==========================================================================================
-// All of the meat and potatoes of this grandiose space battle gamee are contained within this tiny function call.
+// All of the meat and potatoes of this grandiose space battle game are contained within this tiny function call.
 
 startGame()
